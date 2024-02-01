@@ -8,11 +8,14 @@ const app = Vue.createApp({
             emails: []
         }
     },
-    create() {
-        axios.get(endpoint).then((res) => {
-            const email = res.data.response
-            this.emails.push(email)
-        })
+    created() {
+        for (let i = 1; i <= 10; i++) {
+            axios.get(endpoint).then((res) => {
+                const email = res.data.response
+                this.emails.push(email)
+            })
+        }
+
     }
 });
 
