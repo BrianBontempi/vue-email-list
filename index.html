@@ -28,7 +28,9 @@
 <body>
     <div id="root">
         <ul id="mail-list">
-            <li v-for="(email, i) in emails" :key="i"></li>
+            <li v-for="(email, i) in emails" :key="i">
+                {{email}}
+            </li>
         </ul>
     </div>
 </body>
